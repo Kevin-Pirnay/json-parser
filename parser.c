@@ -373,6 +373,8 @@ char *parse(char **key_array, int size, FILE *file_r)
     while (!feof(file_r))
     {
         char c = fgetc(file_r);
+        
+        /* TODO: refactor code */
 
         enum Type_flag type_flag = push_analyse_and_update_stack_type(c, stack_type);
 
